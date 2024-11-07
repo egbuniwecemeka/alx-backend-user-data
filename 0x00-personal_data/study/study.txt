@@ -1,0 +1,53 @@
+PII personally identifiable information(Categories)
+-   Linked
+-   Limkable
+-   Sensitive
+-   Non-sensitive
+
+Personal data includes any information relating to an identified or identifiable person, including online identifiers like cookies and IP addresses.
+
+Difference between PII and personal data
+Personally identifiable information (PII) PII is used in the US, but no specific legal document defines it. While, On the other hand, personal data has one legal definition established by the General Data Protection Regulation (GDPR), which is accepted as law across the European Union (EU)
+
+But why is all that so important? As a website admin, app creator or product owner, you need to be aware that visitors and users could share sensitive information with you. These traces might enable you to identify individuals, so you must handle such data carefully. From a legal standpoint, it could be a matter of breaches and violations with serious consequences. Grasping the bigger picture is crucial for your organization’s security and legal compliance.
+
+According to NIST, PII can be divided into linked and linkable information.
+
+- Linked information
+Linked information can also be defined as direct identifiers. unique to a person and typically enough to determine someone’s identity.
+
+- Linkable information
+Linkable information concerns indirect identifiers or quasi-identifiers. They may not be able to identify a person on their own, but identification becomes possible when combined with another piece of information.
+
+Sensitive vs. non-sensitive PII
+
+Sensitive PII
+Sensitive PII is information that can directly identify an individual and could result in harm to them if a data breach occurs. They are not available publicly and data privacy laws require organizations to safeguard them by encryption, access control and security measures. Eg SSN, passport numbers, fingerprints, medical records, password info etc
+
+Non-sensitive PII
+Non-sensitive PII is information that may or may not be unique to an individual person. This type of data can be transmitted without being encrypted, and disclosure of it will not cause harm to the individuals that the data concerns. eg Phone  numbers, Full name, Mother's maiden name, IP address, Place/Date of birth
+
+How PII differs from PHI
+Protected health information (PHI) includes information used in a medical context that can identify patients. When health information is combined with a personal identifier, the data becomes PHI.
+
+What is non-PII?
+Non-personally identifiable information (non-PII) is data that cannot be used on its own to trace, or identify a person. Eg Partially or fully masked IP adresses
+
+What is personal data?
+‘personal data’ means any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person;
+Essentially, it’s any information relating to an individual or identifiable person, directly or indirectly.
+
+What is non-personal data
+Non-personal data refers to data that will not let you identify an individual
+
+How PII differs from personal data
+In general, all PII is considered personal data, but not all personal data is PII. For example, attributes such as religion, ethnicity, sexual orientation or medical history can be categorized as personal data but not PII.
+
+Personal information (PI) and the CCPA (California ConsumerPrivacy Act)
+The California law defines PI as:
+
+“Information that identifies, relates to, describes, is capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or household.”
+
+Why should you protect PII and personal data
+-   It allows businesses to tailor product/content recommendations to customer's preferences
+Failure to protect personal data, leaves businesses at risk of attacks
