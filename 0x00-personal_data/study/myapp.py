@@ -4,10 +4,11 @@
 import logging
 import mylib
 
+# Logger setup
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='myapp.log', level=logging.INFO)
 
 def main():
+    logging.basicConfig(filename='myapp.log', level=logging.INFO)
     logger.info('Starting')
     mylib.mylog()
     logger.info('Finished')

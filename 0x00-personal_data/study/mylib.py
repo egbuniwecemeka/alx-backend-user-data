@@ -6,4 +6,4 @@ import logging
 logger = logging.getLogger(__name__)
 
 def mylog():
-    logging.info('Do someething')
+    logger.info('Do something')
