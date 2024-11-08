@@ -1,0 +1,5 @@
+DEBUG:__main__:Log mess to log file
+INFO:__main__:Also this
+WARNING:__main__:and warnings to
+ERROR:__main__:Add non-AsCII chacters also
+ERROR:__main__:Add non-AsCII chacters also

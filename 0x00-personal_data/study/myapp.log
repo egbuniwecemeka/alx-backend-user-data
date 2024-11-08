@@ -1,0 +1,6 @@
+INFO:__main__:Starting
+INFO:root:Do someething
+INFO:__main__:Finished
+INFO:__main__:Starting
+INFO:mylib:Do something
+INFO:__main__:Finished
