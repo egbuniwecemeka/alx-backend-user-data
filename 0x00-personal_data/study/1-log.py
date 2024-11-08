@@ -17,10 +17,9 @@ if not isinstance(numeric_level, int):
 
 logging.basicConfig(level=numeric_level, filename='1-log.log', format='%(levelname)s:%(message)s')
 
-logger = logging.getLogerr(__name__)
+logger = logging.getLogger(__name__)
 logger.debug('This is a debug message')
 logger.info('This is am info message')
 logger.warning('This is a warning message')
 logger.error('This is an error message')
 logger.critical('This is a critical message')
-
