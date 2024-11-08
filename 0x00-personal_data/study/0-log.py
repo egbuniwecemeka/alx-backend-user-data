@@ -5,7 +5,7 @@ import logging
 
 # Setup logger config
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='log0.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='abdc.log', encoding='utf-8', level=logging.DEBUG)
 
 logger.debug('Log mess to log file')
 logger.info('Also this')
