@@ -14,8 +14,7 @@ numeric_log = getattr(logging, loglevel.upper(), None)
 if not isinstance(numeric_log, int):
     raise ValueError('Invalid log number: %s' % loglevel)
 
-logging.basicConfig(filename='date_time.log', format='%(asctime)s:%(message)s',
-                    datefmt= '%m/%d/%Y %I:%M:%S %p', level=numeric_log)
+logging.basicConfig(filename='date_time.log', format='%(asctime)s:%(message)s', datefmt= '%m/%d/%Y %I:%M:%S %p', level=numeric_log)
 logger = logging.getLogger(__name__)
 logger.warning('This is a warning message')
 logger.error('This is a error message')
