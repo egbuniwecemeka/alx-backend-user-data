@@ -8,5 +8,5 @@ import re
 def filter_datum(fields: List[str], redaction: str, message: str, separator: str) -> str:
     """ Returns an obfuscated log message """
     regex = fr"({'|'.join(fields)})={separator}*[^ {separator}]*"
-    re.sub(regex, lambda m: f"{m.group(1)}={redaction}", message)
+    return re.sub(regex, lambda m: f"{m.group(1)}={redaction}", message)
     
