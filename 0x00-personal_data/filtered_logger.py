@@ -1,13 +1,15 @@
 #!/bin//usr/env python
 """ A python script that obfuscate a log message """
 
-import logging
+from typing import List
 import re
 
-# Creates a logger name after the module's name.
-logger = logging.getLogger(__name__)
-logging.basicConfig(filename='filter.log')
 
-
-def filter_datum(fields: str, redaction: str, message: str, separator: str) -> str:
+def filter_datum(fields: List[str], redaction: str, message: str, separator: str) -> str:
     """ Returns an obfuscated log message """
+    return re.sub(
+        fr"(?<=({separator})?({'|'.join(fields)})=)[^{separator}]*",
+        redaction,
+        message
+    )
+    
