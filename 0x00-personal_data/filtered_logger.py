@@ -1,4 +1,4 @@
-#!/bin/usr/env python3
+#!/usr/bin/env python3
 """ A python script that obfuscate a log message """
 
 from typing import List
