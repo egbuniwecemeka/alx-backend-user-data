@@ -22,7 +22,7 @@ class RedactingFormatter(logging.Formatter):
         """Formats log records by redacting specified fields."""
         main_message = record.getMessage()
         redacted_message = filter_datum(self.fields, self.REDACTION, main_message, self.SEPARATOR)
-        record.message = redacted_message
+        record.msg = redacted_message
         return super().format(record)
 
 
