@@ -20,8 +20,11 @@ class RedactingFormatter(logging.Formatter):
     
     def format(self, record: logging.LogRecord) -> str:
         """Formats log records by redacting specified fields."""
+        # extracts the original log message
         main_message = record.getMessage()
+        # Redacts special fields in the message using filter_datum method
         redacted_message = filter_datum(self.fields, self.REDACTION, main_message, self.SEPARATOR)
+        # replaces the original message with redacted one
         record.message = redacted_message
         return super().format(record)
 
