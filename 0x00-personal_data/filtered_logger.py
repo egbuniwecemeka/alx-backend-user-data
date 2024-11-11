@@ -14,18 +14,13 @@ class RedactingFormatter(logging.Formatter):
     SEPARATOR = ";"
 
     def __init__(self, fields: List[str]):
-        """ Initializing """
+        """ Initializing formatter with specific fields to redact"""
         super().__init__(self.FORMAT)
         self.fields = fields
     
     def format(self, record: logging.LogRecord) -> str:
         """Formats log records by redacting specified fields."""
-        # extracts the original log message
-        main_message = record.getMessage()
-        # Redacts special fields in the message using filter_datum method
-        redacted_message = filter_datum(self.fields, self.REDACTION, main_message, self.SEPARATOR)
-        # replaces the original message with redacted one
-        record.message = redacted_message
+        record.message = filter_datum(self.fields, self.REDACTION, record.message, self.SEPARATOR)
         return super().format(record)
 
 
