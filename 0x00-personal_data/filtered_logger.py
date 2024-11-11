@@ -32,3 +32,22 @@ def filter_datum(fields: List[str], redaction: str, message: str,
     """ Returns an obfuscated log message """
     regex = fr"({'|'.join(fields)})=[^ {separator}]*"
     return re.sub(regex, lambda m: f"{m.group(1)}={redaction}", message)
+
+def get_logger():
+    """Logs message up to .INFO severity level"""
+    # Create logger named user_data
+    logger = logging.getLogger("user_data")
+    # Set level to INFO
+    logger.setLevel(logging.INFO)
+    # Do not propagate message to other loggers
+    logger.propagate = False
+    # Create a streamHandler for outputing to console
+    stream_handler = logging.StreamHandler()
+    # Create a RedactingFormatter
+    formatter = RedactingFormatter(fields=["email", "ssn", "password"])
+    # Set the formatter for the streamHandler
+    stream_handler.setFormatter(formatter)
+    # Add handler to the logger
+    logger.addHandler(stream_handler)
+
+    return logger
