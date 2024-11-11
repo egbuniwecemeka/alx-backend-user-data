@@ -33,7 +33,7 @@ def filter_datum(fields: List[str], redaction: str, message: str,
     regex = fr"({'|'.join(fields)})=[^ {separator}]*"
     return re.sub(regex, lambda m: f"{m.group(1)}={redaction}", message)
 
-def get_logger():
+def get_logger() -> logging.Logger:
     """Logs message up to .INFO severity level"""
     # Create logger named user_data
     logger = logging.getLogger("user_data")
