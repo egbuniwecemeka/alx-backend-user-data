@@ -7,7 +7,7 @@ GRANT ALL PRIVILEGES ON holberton.* TO 'root'@'localhost';
 
 USE holberton;
 
-DROP TABLE IF EXISTS 'users';
+DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     email VARCHAR(255)
 );
