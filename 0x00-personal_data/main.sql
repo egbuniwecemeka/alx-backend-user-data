@@ -2,7 +2,7 @@
 -- Configures and grants necessary privileges
 
 CREATE DATABASE IF NOT EXISTS holberton;
-CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED BY '';
+CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED BY 'root';
 GRANT ALL PRIVILEGES ON 'holberton'.* TO 'root'@'localhost';
 
 USE holberton;
