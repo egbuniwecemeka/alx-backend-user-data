@@ -1,0 +1,15 @@
+Authentication methods
+
+Classic session-based authentication
+
+    client                                          server
+                authenticate(username/password)
+request/login   ------------------------------->    credentials (validated)
+
+When this credentials are validated, they are saved in a session object (token) which is returned in the servers response as a cookie (because the client needs to store and use this for future verifications). 
+
+    client                                          server
+                    session token
+request/login   <-------------------------------    credentials (validated)
+
+When next the client tries to connect, it uses this cookie (session token) for verification. On closing/logging off, the server destroys the session.
