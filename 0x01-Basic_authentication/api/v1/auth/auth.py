@@ -2,7 +2,7 @@
 """ script to manage API authentication """
 
 from flask import request
-from api.v1.views.user import User
+from api.v1.views.users import User
 from typing import List, TypeVar
 
 
