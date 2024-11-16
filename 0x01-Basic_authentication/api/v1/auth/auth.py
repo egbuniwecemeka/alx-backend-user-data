@@ -9,13 +9,19 @@ from typing import List, TypeVar
 class Auth:
     """Manages API authentication"""
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """Returns false (args will be used later)"""
+        """Determines if authorization is required for a certain path,
+           for now, always return False
+        """
         return False
     
     def authorization_header(self, request=None) -> str:
-        """Returns None as request will be flask request object"""
-        return request
+        """Retrieves the authorization header from the request.
+           For now always return None.
+        """
+        return None
     
     def current_user(self, request=None) -> TypeVar[User]:
-        """ Returns None as request will be flask request object"""
-        return request
+        """Retrieves the current user based on the request.
+           For now, always return None
+        """
+        return None
