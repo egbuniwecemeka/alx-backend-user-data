@@ -3,7 +3,7 @@
 
 from flask import request
 from api.v1.views.users import User
-from typing import List, TypeVar
+from typing import List, Optional
 
 
 class Auth:
@@ -20,7 +20,7 @@ class Auth:
         """
         return None
     
-    def current_user(self, request=None) -> TypeVar['User']:
+    def current_user(self, request=None) -> Optional['User']:
         """Retrieves the current user based on the request.
            For now, always return None
         """
