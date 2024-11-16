@@ -29,7 +29,7 @@ def unauthorized(error) -> str:
 
 
 @app.errorhandler(403)
-def forbidden():
+def forbidden(error):
     """ Forbidden
     """
     return jsonify({"error": "Forbidden"})
