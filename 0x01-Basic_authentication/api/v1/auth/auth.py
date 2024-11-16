@@ -2,6 +2,7 @@
 """ script to manage API authentication """
 
 from flask import request
+from api.v1.views.user import User
 from typing import List, TypeVar
 
 
@@ -15,6 +16,6 @@ class Auth:
         """Returns None as request will be flask request object"""
         return request
     
-    def current_user(self, request=None) -> TypeVar['User']:
+    def current_user(self, request=None) -> TypeVar[User]:
         """ Returns None as request will be flask request object"""
         return request
