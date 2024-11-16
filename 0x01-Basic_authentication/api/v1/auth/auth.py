@@ -15,6 +15,6 @@ class Auth:
         """Returns None as request will be flask object"""s
         return request
     
-    def current_user(self, request=None) -> TypeVar('User'):
+    def current_user(self, request=None) -> TypeVar['User']:
         """ Returns None as request will be flask object"""
         return request
