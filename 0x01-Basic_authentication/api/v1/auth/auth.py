@@ -18,10 +18,13 @@ class Auth:
         """Retrieves the authorization header from the request.
            For now always return None.
         """
-        return None
+        if request is None:
+            return None
+        return request.headers.get('Authorization')
     
     def current_user(self, request=None) -> Optional['User']:
         """Retrieves the current user based on the request.
            For now, always return None
         """
         return None
+    
