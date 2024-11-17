@@ -24,6 +24,7 @@ if AUTH_TYPE == 'basic_auth':
 else:
     auth = Auth()
 
+
 @app.before_request
 def before_request():
     """
