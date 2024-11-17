@@ -33,8 +33,6 @@ class Auth:
             else:
                 return True
 
-        return False
-
     def authorization_header(self, request=None) -> str:
         """Retrieves the authorization header from the request.
            For now always return None.
