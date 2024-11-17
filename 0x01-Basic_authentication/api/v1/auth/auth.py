@@ -17,9 +17,10 @@ class Auth:
                 False if path is in excluded_paths
 
         """
+        # specify check if path is None
         if path is None:
             return True
-        if not excluded_paths:
+        if not excluded_paths:  # generic check for all falsy values.
             return True
 
         # Check if path ends with /, otherwise add it
