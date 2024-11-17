@@ -31,7 +31,7 @@ class Auth:
         for slashed_path in excluded_paths:
             if slashed_path.endswith('/') and path == slashed_path:
                 return False
-        return False
+        return True
 
 
     def authorization_header(self, request=None) -> str:
