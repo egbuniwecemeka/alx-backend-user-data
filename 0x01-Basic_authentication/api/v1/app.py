@@ -23,7 +23,7 @@ if AUTH_TYPE == 'auth':
 
 @app.before_request
 def before_request():
-    """ 
+    """
     Filter request before they reach route handlers
     """
 
@@ -31,21 +31,23 @@ def before_request():
         return
 
     # Validate path exclusion
-    excluded_paths = ['/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/']
+    excluded_paths = ['/api/v1/status/',
+                      '/api/v1/unauthorized/', '/api/v1/forbidden/']
 
     if not auth.require_auth(request.path, excluded_paths):
-            return
-    
+        return
+
     auth_header = request.headers.get('Authorization')
     if auth_header is None:
         abort(401)
-    
+
     try:
         if auth.current_user(request) is None:
             abort(403)
     except Exception as e:
         print(f'Error in auth_current_user: {e}')
         abort(403)
+
 
 @app.errorhandler(404)
 def not_found(error) -> str:
