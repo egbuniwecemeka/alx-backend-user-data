@@ -40,7 +40,11 @@ def before_request():
     if auth_header is None:
         abort(401)
     
-    if auth.current_user(request) is None:
+    try:
+        if auth.current_user(request) is None:
+            abort(403)
+    except Exception as e:
+        print(f'Error in auth_current_user: {e}')
         abort(403)
 
 @app.errorhandler(404)
