@@ -26,11 +26,14 @@ def before_request():
     """ 
     Filter request before they reach route handlers
     """
-    # Check if `auth` is enabled
-    if auth:
-        # Validate path exclusion
-        excluded_paths = ['/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/'] 
-        if not auth.require_auth(request.path, excluded_paths):
+
+    if auth is None:
+        return
+
+    # Validate path exclusion
+    excluded_paths = ['/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/']
+
+    if not auth.require_auth(request.path, excluded_paths):
             return
     
     if auth.authorization_header(request) is None:
