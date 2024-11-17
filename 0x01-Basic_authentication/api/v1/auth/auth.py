@@ -29,7 +29,7 @@ class Auth:
         
         # Now, checked path is checked to see if its in the extended_path
         for slashed_path in excluded_paths:
-            if slashed_path.endswith('/') and path == excluded_paths:
+            if slashed_path.endswith('/') and path == slashed_path:
                 return False
         return False
 
