@@ -17,16 +17,18 @@ CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 # Initialize auth instance based on environment variables
 auth = None
 AUTH_TYPE = getenv('AUTH_TYPE')
-if AUTH_TYPE == auth:
+if AUTH_TYPE == 'auth':
     auth = Auth()
+
 
 @app.before_request
 def before_request():
     """ 
+    Filter request before they reach route handlers
     """
-
+    # Check if `auth` is enabled
     if auth:
-
+        # Validate path exclusion
         excluded_paths = ['/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/'] 
         if not auth.require_auth(request.path, excluded_paths):
             return
