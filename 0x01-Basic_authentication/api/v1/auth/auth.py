@@ -19,7 +19,7 @@ class Auth:
         """
         if path is None:
             return True
-        if excluded_paths is None:
+        if not excluded_paths:
             return True
 
         # Check if path ends with /, otherwise add it
