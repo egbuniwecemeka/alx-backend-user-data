@@ -37,9 +37,14 @@ class Auth:
         """Retrieves the authorization header from the request.
            For now always return None.
         """
+        request_auth = request.headers.get('Authorization')
+
         if request is None:
             return None
-        return request.headers.get('Authorization')
+        if request_auth not in request:
+            return None
+
+        return request_auth
 
     def current_user(self, request=None) -> Optional['User']:
         """Retrieves the current user based on the request.
