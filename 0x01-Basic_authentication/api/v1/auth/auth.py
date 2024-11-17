@@ -21,7 +21,17 @@ class Auth:
             return True
         if excluded_paths is None:
             return True
-        return False
+
+        # Check if path ends with /, otherwise add it
+        if not path.endswith('/'):
+            path += '/'
+        
+        # Now, checked path is checked to see if its in the extended_path
+        for slashed_path in excluded_paths:
+            if slashed_path.endswith('/') and path == excluded_paths:
+                return False
+
+        return True
 
     def authorization_header(self, request=None) -> str:
         """Retrieves the authorization header from the request.
