@@ -30,6 +30,8 @@ class Auth:
         for slashed_path in excluded_paths:
             if slashed_path.endswith('/') and path == excluded_paths:
                 return False
+            else:
+                return True
 
         return False
 
