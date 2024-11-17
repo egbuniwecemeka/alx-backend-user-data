@@ -17,7 +17,7 @@ class Auth:
                 False if path is in excluded_paths
 
         """
-        if path is None:
+        if not path:
             return True
         return False
 
