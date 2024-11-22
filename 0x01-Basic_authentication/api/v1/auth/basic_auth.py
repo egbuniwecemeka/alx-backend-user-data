@@ -19,4 +19,4 @@ class BasicAuth(Auth):
             return None
         
         # Extract and return the basic part after `Basic `
-        return authorization_header[]
+        return authorization_header[6:]
