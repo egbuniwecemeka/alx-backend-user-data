@@ -35,7 +35,7 @@ class BasicAuth(Auth):
         
         try:
             # Decode Base64 header
-            decoded_bytes = base64.base64decode(base64_authorization_header)
+            decoded_bytes = base64.b64decode(base64_authorization_header)
 
             # Return decoded byte as UTF8 string
             return decoded_bytes.decode('utf8')
