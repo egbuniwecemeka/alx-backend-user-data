@@ -20,3 +20,4 @@ class BasicAuth(Auth):
         
         # Extract and return the basic part after `Basic `
         return authorization_header[6:]
+    
