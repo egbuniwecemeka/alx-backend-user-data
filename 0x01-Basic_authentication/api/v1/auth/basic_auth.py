@@ -17,3 +17,6 @@ class BasicAuth(Auth):
         
         if not authorization_header.startswith('Basic '):
             return None
+        
+        # Extract and return the basic part after `Basic `
+        return authorization_header[]
