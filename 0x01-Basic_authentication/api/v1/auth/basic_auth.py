@@ -12,3 +12,6 @@ class BasicAuth(Auth):
         if authorization_header is None:
             return None
         
+        if not isinstance(authorization_header, str):
+            return None
+        
