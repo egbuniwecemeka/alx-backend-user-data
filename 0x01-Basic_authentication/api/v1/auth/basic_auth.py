@@ -110,7 +110,9 @@ class BasicAuth(Auth):
             return None
 
         # Extract user's credentials
-        user_email, user_password = self.extract_user_credentials(decode_base64_header)
+        user_email, user_password = self.extract_user_credentials(
+            decode_base64_header
+        )
         if user_email is None or user_password is None:
             return None
 
