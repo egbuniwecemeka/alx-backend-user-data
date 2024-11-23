@@ -96,12 +96,12 @@ class BasicAuth(Auth):
             return None
 
         # Take the authorization header and extract the base64 portion of it
-        base64_authorization = self.extract_base64_authorization_header(authorization_header)
-        if base64_authorization is None:
+        base64_authorization_header = self.extract_base64_authorization_header(authorization_header)
+        if base64_authorization_header is None:
             return None
 
         # Decode the Base64 string to get the plain-text credentials
-        decode_base64_authorization_header = self.decode_base64_authorization_header(decode_base64_authorization_header)
+        decode_base64_authorization_header = self.decode_base64_authorization_header(base64_authorization_header)
         if decode_base64_authorization_header is None:
             return None
         
@@ -113,4 +113,3 @@ class BasicAuth(Auth):
         # Retrieve the User instance using the email and password
         user = self.user_object_from_credentials(user_email, user_password)
         return user
-
