@@ -83,6 +83,6 @@ class BasicAuth(Auth):
         # Verify the password with password validating method
         if not user.is_valid_password(user_pwd):
             return None
-        
+
         # Return user instance if all checks passes
         return user
