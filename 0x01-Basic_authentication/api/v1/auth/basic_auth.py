@@ -87,7 +87,7 @@ class BasicAuth(Auth):
         # Return user instance if all checks passes
         return user
     
-    def current_user(self, request=None) -> Optional['User']:
+    def current_user(self, request=None) -> TypeVar('User'):
         """Overloads Auth and retrieves the user instance of a request"""
         
         # Extracting the authorization header from the request
